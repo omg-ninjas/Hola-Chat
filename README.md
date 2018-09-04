@@ -1,5 +1,4 @@
-# Hola-chat
-
+# Hola-Chat
 General Information:
 
     Reactjs: Front-end
@@ -16,6 +15,7 @@ How to Get Started
     In a terminal window, type 'npm run react-dev'. This will start webpack for the jsx files
     In a new terminal window, type 'npm run start'. This starts the express web server
     In a browser window enter http://localhost:3000 to view the main page of the site
+
 
 ## Available Scripts
 
