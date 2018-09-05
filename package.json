@@ -8,9 +8,10 @@
     "react-dom": "^16.4.2",
     "react-scripts": "1.1.5",
     "socket.io": "^2.1.1",
+    "tachyons": "^4.11.1",
     "uuid": "^3.3.2"
   },
-  "scripts": {  
+  "scripts": {
     "start": "react-scripts start",
     "server": "nodemon src/server/index.js",
     "build": "react-scripts build",
