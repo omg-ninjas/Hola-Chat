@@ -4,7 +4,7 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        Hola Chat   
+        <h1>This is Front End</h1>
       </div>
     );
   }
