@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import io from "socket.io-client";
-import {USER_CONNECTED, LOGOUT} from '../Events'
+import {USER_CONNECTED, LOGOUT} from '../Events';
 import LoginForm from './LoginForm.js';
 
 const socketUrl = "http://127.0.0.1:3000;"
