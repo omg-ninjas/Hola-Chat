@@ -23,4 +23,3 @@ CREATE TABLE Messages(
  room_id varchar(5) NOT NULL,
  PRIMARY KEY (ID)
 );
-     
