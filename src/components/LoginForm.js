@@ -25,7 +25,7 @@ export default class LoginForm extends Component {
       <div className= "login">
          <form onSubmit={this.handleSubmit} className="login-form">
             <label htmlform="nickname">
-                <h2>Got a nickname?</h2>
+                <h2>User Name?</h2>
             </label>
             <input
                  ref={(input)=>{this.textInput = input }}
