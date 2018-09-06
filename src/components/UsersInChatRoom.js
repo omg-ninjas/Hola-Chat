@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-export default class UsersIndChatRoom extends Component {
+export default class UsersInChatRoom extends Component {
 
 
 
