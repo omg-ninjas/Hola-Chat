@@ -17,7 +17,7 @@ export class LoginForm extends Component {
                 <h2>Got a nickname?</h2>
             </label>
             <input
-                 ref={(input) => {this.textInput = input }}
+                 ref={(input)=>{this.textInput = input }}
                  type="text"
                  id="nickname"
                  value={nickname}
