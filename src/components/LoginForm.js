@@ -1,19 +1,30 @@
 import React, {Component} from 'react';
+import VERIFY_USER from '../Events.js';
 
-export class LoginForm extends Component {
+export default class LoginForm extends Component {
   constructor(props){
     super(props);
-    this.State = {
+    this.state = {
       nickname: "",
       error:""
     };
   }
+  handleSubmit = (e) => {
+    e.preventDefult(this.props)
+     const {socket} = this.props
+     const {nickname} = this.state
+     socket.emit(VERIFY_USER, nickname, this.setUser)
+  }
+  handleChange = (e) => {
+    this.setState({nickname:e.target.value})
+  }
+
   render(){
     const { nickname, error } = this.state
     return(
       <div className= "login">
          <form onSubmit={this.handleSubmit} className="login-form">
-            <label htmlForm="nickname">
+            <label htmlform="nickname">
                 <h2>Got a nickname?</h2>
             </label>
             <input
@@ -22,7 +33,7 @@ export class LoginForm extends Component {
                  id="nickname"
                  value={nickname}
                  onChange={this.handleChange}
-                 placeHolder={'MyCoolUserName'}
+                 placeholder={'MyCoolUserName'}
                  />
                  <div className="error">{error ? error:null}</div>
          </form>
