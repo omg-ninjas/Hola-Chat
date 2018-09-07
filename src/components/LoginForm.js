@@ -10,7 +10,7 @@ export default class LoginForm extends Component {
     };
   }
   handleSubmit = (e) => {
-    e.preventDefult(this.props)
+    e.preventDefault(this.props)
      const {socket} = this.props
      const {nickname} = this.state
      socket.emit(VERIFY_USER, nickname, this.setUser)
