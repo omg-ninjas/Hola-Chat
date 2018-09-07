@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS Hola-Chat;
+DROP DATABASE IF EXISTS Holachat;
 
-CREATE DATABASE Hola-Chat;
+CREATE DATABASE Holachat;
 
-USE Hola-Chat;
+USE Holachat;
 
 CREATE TABLE users(
  id int NOT NULL AUTO_INCREMENT,
@@ -16,10 +16,14 @@ CREATE TABLE room(
  PRIMARY KEY (ID)
 );
 
-CREATE TABLE Messages(
- id int NOT NULL AUTO_INCREMENT,
+CREATE TABLE messages(
+ messages_id INT NOT NULL AUTO_INCREMENT,
  message varchar(160) NOT NULL,
- username_id varchar(100) NOT NULL,
- room_id varchar(5) NOT NULL,
- PRIMARY KEY (ID)
-);
+ username_id INT(100) NOT NULL,
+ room_id INT(5) NOT NULL,
+ PRIMARY KEY (messages_id),
+ INDEX (username_id),
+ INDEX (room_id),
+ FOREIGN KEY (username_id) REFERENCES users(id),
+ FOREIGN KEY (room_id) REFERENCES room(id)
+)ENGINE=INNODB
