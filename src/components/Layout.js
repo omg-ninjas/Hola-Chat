@@ -29,13 +29,14 @@ setUser = (user) => {
    this.setState({user})
 }
 logout = () =>{
-  const [socket] = this.State
+  const {socket} = this.State
   socket.emit(LOGOUT)
   this.setState({user:null})
 }
 
 render(){
   const { title } = this.props
+  const {socket} = this.state
   return(
     <div className="container">
        <LoginForm socket={title} setUser={this.setUser}/>
